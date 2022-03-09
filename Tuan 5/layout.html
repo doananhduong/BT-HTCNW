@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: auto;
+        }
+        body{
+            background-image: url(./background.png);
+        }
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        
+        header {
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(231, 163, 74);
+            background-image: url(./header.png);
+        }
+        
+        nav {
+            height: 50px;
+            width: 1089px;
+            background-color: rgb(83, 172, 63);
+            line-height: 50px;
+        }
+        
+        .content {
+            height: 300px;
+            width: 100%;
+            background-color: rgb(189, 199, 194);
+        }
+        
+        footer {
+            height: 130px;
+            width: 1089px;
+            background-color: rgb(76, 0, 255);
+        }
+        
+        aside {
+            height: 100%;
+            width: 30%;
+            background-color: rgb(103, 132, 155);
+            float: left;
+        }
+        
+        section {
+            height: 100%;
+            width: 70%;
+            background-color: rgb(165, 110, 38);
+            float: left;
+        }
+        .menu li{
+            height: 100%;
+            width: 130px;
+            background-color: antiquewhite;
+            float: left;
+            line-height: 50px;
+            text-indent: 20px;
+            list-style: none;
+            position: relative;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu li:hover{
+            background-color: black;
+        }
+        li:hover>a{
+            color: white;
+            font-style: italic;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+        nav span form #btnGo{
+            padding: 3px;
+            border-radius: 50%;
+        }
+        nav span form #txtEmail{
+            padding: 3px;
+            border-radius: 10%;
+        }
+    
+        nav span form{
+            background-color: rgb(217, 216, 233);
+        }
+        .wrapper header p{
+            font-size: 50px;
+            text-shadow: 10px 10px 20px red;
+            text-align: center;
+        }
+        .wrapper header:hover p{
+            transform: rotate(25deg);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="" method="post">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhap email" minlength="20">
+                    <input type="submit" value="GO" id="btnGo">
+                </form>
+            </span>
+        </nav>
+        <header>
+            <p>Game Show</p>
+        </header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h2>Doan</h2>
+                    <img src="./h1.png" alt="" height="50px">
+                </article>
+                <article>
+                    <h2>Hoc tap</h2>
+                    <img src="./h2.jpg" alt="" height="90px">
+
+                </article>
+                <article>
+                    <h2>Mua he xanh</h2>
+                    <img src="./h3.jpg" alt="" height="100px">
+                </article>
+            </aside>
+            <section>
+                <h2>DANG KY DANH SACH</h2>
+                <form action="dangky.php" method="post">
+                    <fieldset>
+                        <legend>Thong tin cua ban</legend>
+                        <label for="lblHoTen">Ho ten:</label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhap ho ten" minlength="20"> <br> <br>
+                        <label for="lblGioiTinh">Gioi tinh:</label>
+                        <input type="radio" name="radNam" id="radNam" value="nam">
+                        <label>Nam</label>
+                        <input type="radio" name="radNam" id="radNu" value="nu">
+                        <label>Nu</label>
+                        <br><br>
+                        <label for="lblHoTen">Ngay Sinh:</label>
+                        <input type="date" name="txtDate" id="txtDate" required placeholder="Ngay Sinh" minlength="20" pattern="dd/MM/yyyy"><br><br>
+                        <label for="lblHoTen">Ho ten:</label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhap ho ten" minlength="20">
+                        <input type="submit" value="GO">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+
+</html>
