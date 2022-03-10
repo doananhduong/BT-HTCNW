@@ -92,7 +92,19 @@
                 return true;
             }
         }
-                
+         function SubmitForm(){
+             if(KiemTraTenDN() == false || KiemTraPassWor() == false || KiemTraXacNhanPassWord() == false){
+                 alert("Ban chua nhap day du dung thong tin")
+             }
+             else{
+                 var tt1 = document.getElementById("txtName").value;
+                 var tt2 = document.getElementById("txtNS").value;
+                 var w = open("FormValidation_info.html","Ketqua");
+                 w.document.write("<b>THONG TIN CA NHAN</b>");
+                 w.document.write("Ho ten:"+tt1+"<br>");
+                 w.document.write("Nam sinh:"+tt2+"<br>");
+             }
+         }       
     </script>
 </head>
 <body>
@@ -105,12 +117,12 @@
         </div>
         <div>
             <label for="txtMK" class="title">Mật khẩu:</label>
-            <input type="password" id="txtMK" name="txtMK" size="30" placeholder="txtMK"/>
+            <input type="password" id="txtMK" name="txtMK" size="30" onblur="return KiemTraPassWord();" placeholder="txtMK"/>
             <span id="mk">*</span>
         </div>
         <div>
             <label for="txtXNMK" class="title">Nhập lại mật khẩu:</label>
-            <input type="password" id="txtXNMK" name="txtXNMK" size="30" placeholder="txtXNMK"/>
+            <input type="password" id="txtXNMK" name="txtXNMK" size="30" onblur="return KiemTraXacNhanPassWord();" placeholder="txtXNMK"/>
             <span id="xnmk">*</span>
         </div>
         <h5 align="center">THÔNG TIN CÁ NHÂN</h5>
@@ -121,7 +133,7 @@
         </div>
         <div>
             <label for="txtNS" class="title">Ngày sinh:</label>
-            <input type="date" name="txtNS" id="txtNS" size="30" placeholder="txtNS">
+            <input type="date" name="txtNS" id="txtNS" size="30" onblur="return KiemTraNgaySinh();" placeholder="txtNS">
             <span id="ngaysinh">..</span>
         </div>
         <div class="radio-buttons">
