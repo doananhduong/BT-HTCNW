@@ -112,17 +112,17 @@
     <form action="#" name="form1" method="post">
         <div>
             <label for="txtDN" class="title">Tên dăng nhập:</label>
-            <input type="text" id="txtDN" name="txtdn" onblur="return KiemTraTenDN();" size="30" placeholder="txtDN"/>
+            <input type="text" id="txtDN" name="txtdn" onblur="KiemTraTenDN();" size="30" placeholder="txtDN"/>
             <span id="tendn">*</span>
         </div>
         <div>
             <label for="txtMK" class="title">Mật khẩu:</label>
-            <input type="password" id="txtMK" name="txtMK" size="30" onblur="return KiemTraPassWord();" placeholder="txtMK"/>
+            <input type="password" id="txtMK" name="txtMK" size="30" onblur="KiemTraPassWord();" placeholder="txtMK"/>
             <span id="mk">*</span>
         </div>
         <div>
             <label for="txtXNMK" class="title">Nhập lại mật khẩu:</label>
-            <input type="password" id="txtXNMK" name="txtXNMK" size="30" onblur="return KiemTraXacNhanPassWord();" placeholder="txtXNMK"/>
+            <input type="password" id="txtXNMK" name="txtXNMK" size="30" onblur="KiemTraXacNhanPassWord();" placeholder="txtXNMK"/>
             <span id="xnmk">*</span>
         </div>
         <h5 align="center">THÔNG TIN CÁ NHÂN</h5>
@@ -133,7 +133,7 @@
         </div>
         <div>
             <label for="txtNS" class="title">Ngày sinh:</label>
-            <input type="date" name="txtNS" id="txtNS" size="30" onblur="return KiemTraNgaySinh();" placeholder="txtNS">
+            <input type="date" name="txtNS" id="txtNS" size="30" onblur="KiemTraNgaySinh();" placeholder="txtNS">
             <span id="ngaysinh"></span>
         </div>
         <div class="radio-buttons">
